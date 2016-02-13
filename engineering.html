@@ -1,0 +1,98 @@
+<html ng-app>
+
+<head>
+
+    <link rel="import" href="header.html">
+
+    <style>
+        .x-axis path,
+        .x-axis line {
+            fill: none;
+            stroke: grey;
+        }
+
+        .x-axis text {
+            font-size: 11px;
+            font-family: sans-serif;
+        }
+
+        .y-axis text {
+            font-size: 11px;
+            font-family: sans-serif;
+        }
+
+        .y-axis path,
+        .y-axis line {
+            fill: none;
+            stroke: grey;
+        }
+
+        #gender {
+            margin-top: 10px;
+        }
+
+       #chart {
+            width: 1000px;
+            height: 500px;
+            position: relative;
+        }
+
+        .tooltip {
+            background: #eee;
+            box-shadow: 0 0 5px #777;
+            color: #333;
+            top: 95px;
+            left: 130px;
+            width: 100px;
+            z-index: 10;
+            padding: 10px;
+            position: absolute;
+            display: none;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        svg text {
+            pointer-events: none;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- add navbar-->
+    <div ng-include src="'navbar.html'"></div>
+
+    <!-- side bar -->
+    <div class="col-xs-2">
+        <div class="list-group">
+            <a href="#gender" class="list-group-item">Gender Distribution by Major</a>
+            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+            <a href="#" class="list-group-item">Morbi leo risus</a>
+            <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+            <a href="#" class="list-group-item">Vestibulum at eros</a>
+        </div>
+    </div>
+
+
+    <!-- body content -->
+    <h2>Gender Distribution By Engineering Major</h2>
+    <button id="sortFemale" onclick="sortFemale()">Sort # Female</button>
+    <button id="sortMale" onclick="sortMale()">Sort # Male</button>
+    <button id="sortFemalePercent" onclick="sortFemalePercent()">Sort % Female</button>
+    <button id="sortMalePercent" onclick="sortMalePercent()">Sort % Male</button>
+    <div id="gender"></div>
+    <script src="engineering_gender.js"></script>
+
+    <div class="col-xs-offset-2">
+        <h2>Enrollment by Major</h2>
+        <div id="chart"></div>
+        <script src="engineering_enrollment.js"></script>
+    </div>
+
+
+</body>
+
+</html>

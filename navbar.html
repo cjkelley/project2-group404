@@ -1,43 +1,40 @@
-<html>
-
 <head>
+    <style>
+        .navbar-inverse {
+            background-color: red;
+            border-color: gold;
+            border-bottom-width: medium;
+            color: whitesmoke;
+        }
+        #link {
+            color: whitesmoke;
+        }
 
-    <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </style>
 
 </head>
-
-
-
 <body>
     <nav role="navigation" class="navbar navbar-inverse">
-        <div style="color:lightgrey" class="navbar-header">
+        <div class="navbar-header">
             <h1>ISU STATS</h1>
         </div>
         <!-- Collection of nav links, forms, and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <br>
             <ul class="nav navbar-nav">
-                <li><a href="#/general.html">General</a></li>
-                <li><a href="#/engineering.html">Engineering</a></li>
-                <li><a href="#/design.html">Design</a></li>
-                <li><a href="#/agriculture.html">Agriculture</a></li>
-                <li><a href="#/humanSciences.html">Human Sciences</a></li>
-                <li><a href="#/libralArts.html">Libral Arts</a></li>
-                <li><a href="#/buisness.html">Buisness</a></li>
-                <li><a href="#/vetMed.html">VET MED</a></li>
+                <li><a id="link" href="general.html">General</a></li>
+                <li><a id="link" href="engineering/engineering.html">Engineering</a></li>
+                <li><a id="link" href="design.html">Design</a></li>
+                <li><a id="link" href="agriculture.html">Agriculture</a></li>
+                <li><a id="link" href="humanSciences.html">Human Sciences</a></li>
+                <li><a id="link" href="libralArts.html">Libral Arts</a></li>
+                <li><a id="link" href="buisness.html">Buisness</a></li>
+                <li><a id="link" href="vetMed.html">VET MED</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#/README.md">help</a></li>
+                <li><a id="link" href="README.html">help</a></li>
             </ul>
         </div>
     </nav>
-
-
 </body>
-
-</html>
