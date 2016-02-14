@@ -31,12 +31,6 @@
             margin-top: 10px;
         }
 
-       #chart {
-            width: 1000px;
-            height: 500px;
-            position: relative;
-        }
-
         .tooltip {
             background: #eee;
             box-shadow: 0 0 5px #777;
@@ -55,6 +49,14 @@
         svg text {
             pointer-events: none;
         }
+
+        .affix {
+            top: 20px;
+        }
+
+        #link2 {
+            color: black;
+        }
     </style>
 
 
@@ -66,32 +68,40 @@
     <div ng-include src="'navbar.html'"></div>
 
     <!-- side bar -->
-    <div class="col-xs-2">
-        <div class="list-group">
-            <a href="#gender" class="list-group-item">Gender Distribution by Major</a>
-            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-            <a href="#" class="list-group-item">Morbi leo risus</a>
-            <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item">Vestibulum at eros</a>
-        </div>
-    </div>
-
-
+    <nav class="col-xs-2" id="myScrollspy">
+        <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="100">
+            <li><a id="link2" href="#enrollmentLabel">Enrollment by Major</a></li>
+            <li><a id="link2" href="#genderLabel">Gender Distribution by Major</a></li>
+            <li><a id="link2" href="#section3">Section 3</a></li>
+        </ul>
+    </nav>
     <!-- body content -->
-    <h2>Gender Distribution By Engineering Major</h2>
-    <button id="sortFemale" onclick="sortFemale()">Sort # Female</button>
-    <button id="sortMale" onclick="sortMale()">Sort # Male</button>
-    <button id="sortFemalePercent" onclick="sortFemalePercent()">Sort % Female</button>
-    <button id="sortMalePercent" onclick="sortMalePercent()">Sort % Male</button>
-    <div id="gender"></div>
-    <script src="engineering_gender.js"></script>
-
     <div class="col-xs-offset-2">
-        <h2>Enrollment by Major</h2>
-        <div id="chart"></div>
-        <script src="engineering_enrollment.js"></script>
+        <div id="genderLabel">
+            <h2>Gender Distribution By Engineering Major</h2>
+            <button id="sortFemale" onclick="sortFemale()">Sort # Female</button>
+            <button id="sortMale" onclick="sortMale()">Sort # Male</button>
+            <button id="sortFemalePercent" onclick="sortFemalePercent()">Sort % Female</button>
+            <button id="sortMalePercent" onclick="sortMalePercent()">Sort % Male</button>
+            <div id="gender"></div>
+
+        </div>
+        <div id="enrollmentLabel">
+            <h2>Enrollment by Major</h2>
+            <div id="chart"></div>
+
+        </div>
+        <div id="section3">
+            <h1>Section 3</h1>
+            <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+        </div>
+
+
     </div>
 
+
+            <script src="engineering_enrollment.js"></script>
+            <script src="engineering_gender.js"></script>
 
 </body>
 
