@@ -2,7 +2,7 @@
 
 <head>
 
-    <link rel="import" href="header.html">
+    <link rel="import" href="../header.html">
 
     <style>
         .x-axis path,
@@ -65,7 +65,7 @@
 <body>
 
     <!-- add navbar-->
-    <div ng-include src="'navbar.html'"></div>
+    <div ng-include src="'../navbar.html'"></div>
 
     <!-- side bar -->
     <nav class="col-xs-2" id="myScrollspy">
@@ -84,12 +84,13 @@
             <button id="sortFemalePercent" onclick="sortFemalePercent()">Sort % Female</button>
             <button id="sortMalePercent" onclick="sortMalePercent()">Sort % Male</button>
             <div id="gender"></div>
+            <script src="/engineering/engineering_gender.js"></script>
 
         </div>
         <div id="enrollmentLabel">
             <h2>Enrollment by Major</h2>
             <div id="chart"></div>
-
+            <script src="/engineering/engineering_enrollment.js"></script>
         </div>
         <div id="section3">
             <h1>Section 3</h1>
@@ -100,8 +101,8 @@
     </div>
 
 
-            <script src="engineering_enrollment.js"></script>
-            <script src="engineering_gender.js"></script>
+
+
 
 </body>
 

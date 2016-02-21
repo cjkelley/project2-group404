@@ -1,0 +1,43 @@
+<html ng-app>
+
+<head>
+
+    <link rel="import" href="../header.html">
+
+</head>
+
+<body>
+
+    <!-- add navbar-->
+    <div ng-include src="'../navbar.html'"></div>
+
+    <!-- side bar -->
+    <h1>this is general</h1>
+    <nav class="col-xs-2" id="myScrollspy">
+        <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="100">
+            <li><a id="link2" href="#genderLabel">Gender Distribution by Major</a></li>
+            <li><a id="link2" href="#enrollmentLabel">Enrollment by Major</a></li>
+            <li><a id="link2" href="#section3">Section 3</a></li>
+        </ul>
+    </nav>
+    <!-- body content -->
+    <div class="col-xs-offset-2">
+        <div id="genderLabel">
+            <script src="/1/1.js"></script>
+
+        </div>
+        <div id="enrollmentLabel">
+            <script src="/1/2.js"></script>
+
+        </div>
+        <div id="section3">
+            <h1>Section 3</h1>
+            <script src="/1/3.js"></script>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

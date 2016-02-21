@@ -1,5 +1,6 @@
 var width = 600;
 var height = 400;
+var id = "gender";
 var margin = {
     top: 30,
     right: 25,
@@ -19,6 +20,7 @@ var color = d3.scale.ordinal()
 //create svg
 var svg = d3.select("body").selectAll("#gender")
     .append("svg")
+    .attr("id",id)
     .attr("width", width + margin.right + margin.left)
     .attr("height", height + margin.bottom + margin.top);
 
@@ -34,7 +36,7 @@ var yAxis = d3.svg.axis()
     .orient("left");
 
 //import CSV and build dataset
-d3.csv("gender_stats.csv", function (data) {
+d3.csv("../gender_stats.csv", function (data) {
 
     //assign a color to each gender
     color.domain(d3.keys(data[0]).filter(function (key) {

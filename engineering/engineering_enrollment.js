@@ -1,7 +1,7 @@
 var dataset;
 var height = 500;
 var width = 1000;
-
+var id = "enrollment";
 var outerRadius = height / 2;
 var innerRadius = height / 3;
 
@@ -13,7 +13,7 @@ var pie = d3.layout.pie()
 //define color scale
 var color = d3.scale.category20();
 
-d3.csv("enrollment_stats.csv", function (data) {
+d3.csv("../enrollment_stats.csv", function (data) {
 
     //format data as pie layout
     dataset = (pie(data));
@@ -27,17 +27,18 @@ function generateChart() {
     //create svg canvas for chart
     svg = d3.select("#chart")
         .append("svg")
+        .attr("id", id)
         .attr("height", height)
         .attr("width", width);
 
 
     //draw arc paths
-    arc = d3.svg.arc()
+    arc = d3.select("#id").arc()
         .innerRadius(innerRadius)
         .outerRadius(outerRadius);
 
     //set up arc groups
-    var arcs = svg.selectAll("g.arc")
+    var arcs = d3.select("#id").selectAll("g.arc")
         .data(dataset)
         .enter()
         .append("g") //new group
@@ -73,7 +74,7 @@ function buildLegend() {
     var legendRectSize = 18;
     var legendSpacing = 4;
 
-    var legend = svg.selectAll("g.legend")
+    var legend = d3.select("#id").selectAll("g.legend")
         .data(color.domain())
         .enter()
         .append("g")
@@ -119,7 +120,7 @@ function addTooltips() {
     tooltip.append("div")
         .attr("class", "percent");
 
-    var paths = svg.selectAll("path");
+    var paths = d3.select("#id").selectAll("path");
 
     paths.on('mouseover', function (d) {
 
