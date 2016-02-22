@@ -33,12 +33,12 @@ function generateChart() {
 
 
     //draw arc paths
-    arc = d3.select("#id").arc()
+    arc = d3.svg.arc()
         .innerRadius(innerRadius)
         .outerRadius(outerRadius);
 
     //set up arc groups
-    var arcs = d3.select("#id").selectAll("g.arc")
+    var arcs = d3.svg.selectAll("g.arc")
         .data(dataset)
         .enter()
         .append("g") //new group
@@ -74,7 +74,7 @@ function buildLegend() {
     var legendRectSize = 18;
     var legendSpacing = 4;
 
-    var legend = d3.select("#id").selectAll("g.legend")
+    var legend = d3.svg.selectAll("g.legend")
         .data(color.domain())
         .enter()
         .append("g")
@@ -120,7 +120,7 @@ function addTooltips() {
     tooltip.append("div")
         .attr("class", "percent");
 
-    var paths = d3.select("#id").selectAll("path");
+    var paths = d3.svg.selectAll("path");
 
     paths.on('mouseover', function (d) {
 
